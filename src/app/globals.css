@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #faf6f0;
+  --foreground: #2c1810;
+  --cream: #f5ebe0;
+  --coffee-dark: #3e2723;
+  --coffee: #5d4037;
+  --caramel: #a0622d;
+  --latte: #d7b899;
+  --mocha: #8b5a2b;
+  --sage: #6b7f5e;
+  --accent: #c87941;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-coffee-dark: var(--coffee-dark);
+  --color-coffee: var(--coffee);
+  --color-caramel: var(--caramel);
+  --color-latte: var(--latte);
+  --color-mocha: var(--mocha);
+  --color-sage: var(--sage);
+  --color-accent: var(--accent);
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-coffee-dark text-cream px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-mocha hover:shadow-lg active:scale-95;
+  }
+  .btn-secondary {
+    @apply bg-transparent border-2 border-coffee-dark text-coffee-dark px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-coffee-dark hover:text-cream active:scale-95;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-latte bg-white/80 focus:outline-none focus:ring-2 focus:ring-caramel/40 focus:border-caramel transition-all duration-200 text-foreground placeholder:text-coffee/50;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+}
