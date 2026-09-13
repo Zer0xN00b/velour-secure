@@ -1,3 +1,15 @@
+# Velour Café
+
+A café website originally scaffolded with an AI website builder. When it
+fell back to a fake client-side auth system mid-build, I audited it,
+identified the security gaps, and rebuilt real authentication using
+Neon Postgres and Better Auth.
+
+📄 **[Read the full security audit and fix writeup →](./SECURITY_AUDIT.md)**
+
+🔗 **[Live demo](https://velour-secure-mu.vercel.app/)**
+
+---
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
